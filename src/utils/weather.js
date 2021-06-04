@@ -8,7 +8,7 @@ const weather = (lat, lng, callback) =>{
             callback('Unable to find location', undefined) 
         }else{ 
             const data = JSON.parse(body)
-            callback(undefined, data.current.weather_descriptions[0] + ". It is currently " + data.current.temperature + " degree out. It feels like  " + data.current.feelslike + "  degree out.")
+            callback(undefined, data.current.weather_descriptions[0] + ". It is currently " + data.current.temperature + " degree out. It feels like  " + data.current.feelslike + "  degree out. The humidity is "+ data.current.humidity + "%.")
         }    
     })
 }
